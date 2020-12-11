@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaikanSchoolProjects", "HaikanSchoolProjects\HaikanSchoolProjects.csproj", "{74C59F10-E954-457C-AC51-FC253930A349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haikan.SchoolProjectsCore", "Haikan.SchoolProjectsCore\Haikan.SchoolProjectsCore.csproj", "{38D7AA58-C95B-449B-86C6-A8073A56E11F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74C59F10-E954-457C-AC51-FC253930A349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C59F10-E954-457C-AC51-FC253930A349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C59F10-E954-457C-AC51-FC253930A349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C59F10-E954-457C-AC51-FC253930A349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38D7AA58-C95B-449B-86C6-A8073A56E11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38D7AA58-C95B-449B-86C6-A8073A56E11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38D7AA58-C95B-449B-86C6-A8073A56E11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38D7AA58-C95B-449B-86C6-A8073A56E11F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B0C888D-8D9E-40E2-B901-2E3C7AC77486}
+	EndGlobalSection
+EndGlobal

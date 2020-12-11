@@ -1,0 +1,13 @@
+D:\产品研发\我自己维护的\辅助工具\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\bin\Debug\Haikan.Core.dll
+D:\产品研发\我自己维护的\辅助工具\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\bin\Debug\Haikan.Core.pdb
+D:\产品研发\我自己维护的\辅助工具\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\bin\Debug\Haikan2.dll
+D:\产品研发\我自己维护的\辅助工具\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\obj\Debug\Haikan.Core.csproj.CoreCompileInputs.cache
+D:\产品研发\我自己维护的\辅助工具\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\obj\Debug\Haikan.Core.dll
+D:\产品研发\我自己维护的\辅助工具\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\obj\Debug\Haikan.Core.pdb
+D:\张立聪\项目\HK201810026海看校企合作项目管理系统软件\海看校企合作项目管理系统软件\HaikanSchoolProjects\Core\bin\Debug\Haikan.Core.dll
+D:\张立聪\项目\HK201810026海看校企合作项目管理系统软件\海看校企合作项目管理系统软件\HaikanSchoolProjects\Core\bin\Debug\Haikan.Core.pdb
+D:\张立聪\项目\HK201810026海看校企合作项目管理系统软件\海看校企合作项目管理系统软件\HaikanSchoolProjects\Core\obj\Debug\Haikan.Core.csprojAssemblyReference.cache
+D:\张立聪\项目\HK201810026海看校企合作项目管理系统软件\海看校企合作项目管理系统软件\HaikanSchoolProjects\Core\obj\Debug\Haikan.Core.csproj.CoreCompileInputs.cache
+D:\张立聪\项目\HK201810026海看校企合作项目管理系统软件\海看校企合作项目管理系统软件\HaikanSchoolProjects\Core\obj\Debug\Haikan.Core.csproj.CopyComplete
+D:\张立聪\项目\HK201810026海看校企合作项目管理系统软件\海看校企合作项目管理系统软件\HaikanSchoolProjects\Core\obj\Debug\Haikan.Core.dll
+D:\张立聪\项目\HK201810026海看校企合作项目管理系统软件\海看校企合作项目管理系统软件\HaikanSchoolProjects\Core\obj\Debug\Haikan.Core.pdb

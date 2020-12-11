@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HaikanSchoolProjects.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HaikanSchoolProjects_passportservice_PassportService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://sso.haikan.com.cn/api/passportservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

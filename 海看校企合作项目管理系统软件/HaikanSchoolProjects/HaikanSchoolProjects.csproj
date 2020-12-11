@@ -1,0 +1,1509 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74C59F10-E954-457C-AC51-FC253930A349}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaikanSchoolProjects</RootNamespace>
+    <AssemblyName>HaikanSchoolProjects</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.5.1.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Haikan2, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Haikan2.2.3.0\lib\Haikan2.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="General\Employee\EmployeeAdd.aspx" />
+    <Content Include="General\Enterprise\EnterpriseAdd.aspx" />
+    <Content Include="General\Enterprise\EnterpriseList.aspx" />
+    <Content Include="General\head.htm" />
+    <Content Include="General\Hfile\Hfile.aspx" />
+    <Content Include="General\Hfile\HfileAdd.aspx" />
+    <Content Include="General\HeadAndMenu.ascx" />
+    <Content Include="General\IdentifyingCode.aspx" />
+    <Content Include="General\Login.aspx" />
+    <Content Include="General\Logout.aspx" />
+    <Content Include="General\Main.aspx" />
+    <Content Include="General\Contract\ContractAdd.aspx" />
+    <Content Include="General\Contract\ContractList.aspx" />
+    <Content Include="General\Employee\EmployeeList.aspx" />
+    <Content Include="General\Financial\FinancialList.aspx" />
+    <Content Include="General\Financial\FinancialAdd.aspx" />
+    <Content Include="General\Project\ProjectList.aspx" />
+    <Content Include="General\Project\ProjectAdd.aspx" />
+    <Content Include="General\Statistical\Average.aspx" />
+    <Content Include="General\Statistical\FinancialAnalysis.aspx" />
+    <Content Include="General\Statistical\PersonParticipate.aspx" />
+    <Content Include="General\Statistical\ProjectAnalyze.aspx" />
+    <Content Include="General\Personal\ChangePassword.aspx" />
+    <Content Include="General\SystemManage\SystemLicense.aspx" />
+    <Content Include="General\SystemManage\SystemMenuList.aspx" />
+    <Content Include="General\SystemManage\SystemMenuAdd.aspx" />
+    <Content Include="General\Personal\PersonaInformation.aspx" />
+    <Content Include="General\SystemManage\SystemRolesAdd.aspx" />
+    <Content Include="General\SystemManage\SystemRolesList.aspx" />
+    <Content Include="General\SystemManage\SystemSetting.aspx" />
+    <Content Include="General\SystemManage\SystemLog.aspx" />
+    <Content Include="General\SystemManage\SystemUserList.aspx" />
+    <Content Include="General\SystemManage\SystemUserAdd.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="libs\echarts\echarts.min.js" />
+    <Content Include="libs\haikan\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="libs\haikan\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="libs\haikan\bootstrap\css\bootstrap.css" />
+    <Content Include="libs\haikan\bootstrap\css\bootstrap.min.css" />
+    <Content Include="libs\haikan\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="libs\haikan\bootstrap\js\bootstrap.js" />
+    <Content Include="libs\haikan\bootstrap\js\bootstrap.min.js" />
+    <Content Include="libs\haikan\bootstrap\js\npm.js" />
+    <Content Include="libs\haikan\css\main.css" />
+    <Content Include="libs\haikan\css\main.min.css" />
+    <Content Include="libs\haikan\haikan.css" />
+    <Content Include="libs\haikan\Haikan.js" />
+    <Content Include="libs\haikan\HaikanGeneral.js" />
+    <Content Include="libs\haikan\icons\elegant\fonts\ElegantIcons.svg" />
+    <Content Include="libs\haikan\icons\elegant\lte-ie7.js" />
+    <Content Include="libs\haikan\icons\elegant\style.css" />
+    <Content Include="libs\haikan\icons\elusive\css\elusive-webfont.css" />
+    <Content Include="libs\haikan\icons\elusive\css\fonts\Elusive-Icons.svg" />
+    <Content Include="libs\haikan\icons\flags\flags.css" />
+    <Content Include="libs\haikan\img\avatars\logo.png" />
+    <Content Include="libs\haikan\img\avatars\logo_white.png" />
+    <Content Include="libs\haikan\img\avatars\user.png" />
+    <Content Include="libs\haikan\img\background\bedge_grunge%402x.png" />
+    <Content Include="libs\haikan\img\background\bedge_grunge.png" />
+    <Content Include="libs\haikan\img\background\bedge_grunge_tn.png" />
+    <Content Include="libs\haikan\img\background\fabric_of_squares_gray%402x.png" />
+    <Content Include="libs\haikan\img\background\fabric_of_squares_gray.png" />
+    <Content Include="libs\haikan\img\background\fabric_of_squares_gray_tn.png" />
+    <Content Include="libs\haikan\img\background\grey_wash_wall%402x.png" />
+    <Content Include="libs\haikan\img\background\grey_wash_wall.png" />
+    <Content Include="libs\haikan\img\background\grey_wash_wall_tn.png" />
+    <Content Include="libs\haikan\img\background\grid%402x.png" />
+    <Content Include="libs\haikan\img\background\grid.png" />
+    <Content Include="libs\haikan\img\background\grid_tn.png" />
+    <Content Include="libs\haikan\img\background\mooning%402x.png" />
+    <Content Include="libs\haikan\img\background\mooning.png" />
+    <Content Include="libs\haikan\img\background\mooning_tn.png" />
+    <Content Include="libs\haikan\img\background\shattered%402x.png" />
+    <Content Include="libs\haikan\img\background\shattered.png" />
+    <Content Include="libs\haikan\img\background\shattered_tn.png" />
+    <Content Include="libs\haikan\img\background\wall4%402x.png" />
+    <Content Include="libs\haikan\img\background\wall4.png" />
+    <Content Include="libs\haikan\img\background\wall4_tn.png" />
+    <Content Include="libs\haikan\img\blank.gif" />
+    <Content Include="libs\haikan\img\gallery\Image001%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image001.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image002%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image002.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image003%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image003.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image004%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image004.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image005%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image005.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image006%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image006.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image007%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image007.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image008%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image008.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image009%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image009.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image010%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image010.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image011%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image011.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image012%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image012.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image013%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image013.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image014%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image014.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image015%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image015.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image016%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image016.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image017%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image017.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image018%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image018.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image019%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image019.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image020%402x.jpg" />
+    <Content Include="libs\haikan\img\gallery\Image020.jpg" />
+    <Content Include="libs\haikan\img\logo.png" />
+    <Content Include="libs\haikan\img\preloader.gif" />
+    <Content Include="libs\haikan\js\fastclick.js" />
+    <Content Include="libs\haikan\js\fastclick.min.js" />
+    <Content Include="libs\haikan\js\jquery.min.js" />
+    <Content Include="libs\haikan\js\jquery.steps.custom.js" />
+    <Content Include="libs\haikan\js\jquery.steps.custom.min.js" />
+    <Content Include="libs\haikan\js\jquery.validate.js" />
+    <Content Include="libs\haikan\js\jqueryCookie.min.js" />
+    <Content Include="libs\haikan\js\moment-with-langs.min.js" />
+    <Content Include="libs\haikan\js\moment.min.js" />
+    <Content Include="libs\haikan\js\parsley.config.js" />
+    <Content Include="libs\haikan\js\parsley.config.min.js" />
+    <Content Include="libs\haikan\js\retina.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.css" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery-1.11.0.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery-1.9.1.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery-2.1.0.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery-ui-1.10.4.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery.mCustomScrollbar.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery.mousewheel-3.0.6.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery.mousewheel.min.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\uncompressed\jquery.mCustomScrollbar.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\uncompressed\jquery.mousewheel-3.0.6.js" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\uncompressed\jquery.mousewheel.js" />
+    <Content Include="libs\highcharts\css\annotations\popup.css" />
+    <Content Include="libs\highcharts\css\highcharts.css" />
+    <Content Include="libs\highcharts\css\stocktools\gui.css" />
+    <Content Include="libs\highcharts\css\themes\dark-unica.css" />
+    <Content Include="libs\highcharts\css\themes\grid-light.css" />
+    <Content Include="libs\highcharts\css\themes\sand-signika.css" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\A11yI18n.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Accessibility.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\AccessibilityComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\AnnotationsA11y.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\ContainerComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\InfoRegionsComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\LegendComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\MenuComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\RangeSelectorComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\SeriesComponent\ForcedMarkers.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\SeriesComponent\NewDataAnnouncer.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\SeriesComponent\SeriesComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\SeriesComponent\SeriesDescriber.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\SeriesComponent\SeriesKeyboardNavigation.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Components\ZoomComponent.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\FocusBorder.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\HighContrastMode.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\HighContrastTheme.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\KeyboardNavigation.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\KeyboardNavigationHandler.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Options\DeprecatedOptions.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Options\LangOptions.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Options\Options.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Utils\Announcer.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Utils\ChartUtilities.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Utils\DOMElementProvider.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Utils\EventProvider.js" />
+    <Content Include="libs\highcharts\es-modules\Accessibility\Utils\HTMLUtilities.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\Axis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\Axis3D.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\BrokenAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\ColorAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\DateTimeAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\GridAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\HiddenAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\LogarithmicAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\MapAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\NavigatorAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\OrdinalAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\PlotLineOrBand.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\RadialAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\ScrollbarAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\StackingAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\Tick.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\Tick3D.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\TreeGridAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\TreeGridTick.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\VMLAxis3D.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Axis\ZAxis.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Chart\Chart.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Chart\Chart3D.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Chart\GanttChart.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Chart\StockChart.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Color.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Dynamics.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Globals.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Interaction.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Legend.js" />
+    <Content Include="libs\highcharts\es-modules\Core\MSPointer.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Navigator.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Options.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Pointer.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Renderer\HTML\HTML.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Renderer\SVG\SVGElement.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Renderer\SVG\SVGLabel.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Renderer\SVG\SVGRenderer.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Renderer\SVG\SVGRenderer3D.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Renderer\VML\VMLRenderer3D.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Responsive.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Scrollbar.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Series\DataLabels.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Series\Point.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Series\Series.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Series\Series3D.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Time.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Tooltip.js" />
+    <Content Include="libs\highcharts\es-modules\Core\Utilities.js" />
+    <Content Include="libs\highcharts\es-modules\error-messages.js" />
+    <Content Include="libs\highcharts\es-modules\error.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Ajax.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Annotations.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Controllables\ControllableCircle.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Controllables\ControllableImage.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Controllables\ControllableLabel.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Controllables\ControllablePath.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Controllables\ControllableRect.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\ControlPoint.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Mixins\ControllableMixin.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Mixins\EventEmitterMixin.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Mixins\MarkerMixin.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\MockPoint.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\NavigationBindings.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Popup.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\BasicAnnotation.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\CrookedLine.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\ElliottWave.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\Fibonacci.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\InfinityLine.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\Measure.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\Pitchfork.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\Tunnel.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Annotations\Types\VerticalLine.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\ArrowSymbols.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\BoostCanvas.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\Boost.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\BoostableMap.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\Boostables.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\BoostAttach.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\BoostInit.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\BoostOptions.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\BoostOverrides.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\BoostUtils.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\NamedColors.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\WGLRenderer.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\WGLShader.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Boost\WGLVBuffer.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\CurrentDateIndication.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Data.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\DataGrouping.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Debugger.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\DownloadURL.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\DraggablePoints.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\DragPanes.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Drilldown.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\ExportData.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Exporting.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\FullScreen.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\GeoJSON.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\MarkerClusters.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Math3D.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\NoDataToDisplay.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\OfflineExporting.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Oldie.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\OldiePolyfills.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\OverlappingDataLabels.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Pane.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\ParallelCoordinates.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\PatternFill.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Polar.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\PriceIndication.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\RangeSelector.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\ScrollablePlotArea.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\SeriesLabel.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Stacking.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\StaticScale.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\Avocado.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\DarkBlue.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\DarkGreen.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\DarkUnica.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\Gray.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\Grid.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\GridLight.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\HighContrastDark.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\HighContrastLight.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\SandSignika.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\Skies.js" />
+    <Content Include="libs\highcharts\es-modules\Extensions\Themes\Sunset.js" />
+    <Content Include="libs\highcharts\es-modules\Gantt\Connection.js" />
+    <Content Include="libs\highcharts\es-modules\Gantt\Pathfinder.js" />
+    <Content Include="libs\highcharts\es-modules\Gantt\PathfinderAlgorithms.js" />
+    <Content Include="libs\highcharts\es-modules\Gantt\Tree.js" />
+    <Content Include="libs\highcharts\es-modules\highcharts.src.js" />
+    <Content Include="libs\highcharts\es-modules\Maps\Map.js" />
+    <Content Include="libs\highcharts\es-modules\Maps\MapNavigation.js" />
+    <Content Include="libs\highcharts\es-modules\Maps\MapPointer.js" />
+    <Content Include="libs\highcharts\es-modules\masters\highcharts-3d.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\highcharts-more.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\highcharts.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\accessibility.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\annotations-advanced.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\annotations.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\arrow-symbols.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\boost-canvas.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\boost.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\broken-axis.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\bullet.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\coloraxis.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\current-date-indicator.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\cylinder.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\data.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\datagrouping.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\debugger.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\dependency-wheel.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\dotplot.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\drag-panes.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\draggable-points.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\drilldown.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\dumbbell.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\export-data.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\exporting.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\full-screen.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\funnel.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\funnel3d.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\gantt.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\grid-axis.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\heatmap.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\histogram-bellcurve.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\item-series.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\lollipop.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\marker-clusters.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\networkgraph.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\no-data-to-display.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\offline-exporting.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\oldie-polyfills.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\oldie.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\organization.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\overlapping-datalabels.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\parallel-coordinates.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\pareto.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\pathfinder.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\pattern-fill.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\price-indicator.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\pyramid3d.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\sankey.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\series-label.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\solid-gauge.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\sonification.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\static-scale.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\stock-tools.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\stock.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\streamgraph.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\sunburst.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\tilemap.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\timeline.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\treegrid.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\treemap.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\variable-pie.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\variwide.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\vector.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\venn.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\windbarb.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\wordcloud.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\modules\xrange.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\avocado.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\dark-blue.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\dark-green.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\dark-unica.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\gray.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\grid-light.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\grid.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\high-contrast-dark.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\high-contrast-light.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\sand-signika.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\skies.src.js" />
+    <Content Include="libs\highcharts\es-modules\masters\themes\sunset.src.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\CenteredSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\ColorMapSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\ColorSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\DerivedSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\DrawPoint.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\Geometry.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\GeometryCircles.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\IndicatorRequired.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\LegendSymbol.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\MultipleLines.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\Navigation.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\NelderMead.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\Nodes.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\OnSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\Polygon.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\ReduceArray.js" />
+    <Content Include="libs\highcharts\es-modules\Mixins\TreeSeries.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\chartSonify.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\Earcon.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\Instrument.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\instrumentDefinitions.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\musicalFrequencies.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\options.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\pointSonify.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\sonification.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\Timeline.js" />
+    <Content Include="libs\highcharts\es-modules\modules\sonification\utilities.js" />
+    <Content Include="libs\highcharts\es-modules\parts.js" />
+    <Content Include="libs\highcharts\es-modules\Series\AreaRangeSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\AreaSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\AreaSplineRangeSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\AreaSplineSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\BarSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\BellcurveSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\BoxPlotSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Bubble\BubbleLegend.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Bubble\BubbleSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\BulletSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\CandlestickSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Column3DSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\ColumnPyramidSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\ColumnRangeSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\ColumnSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\CylinderSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\DependencyWheelSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\DotplotSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\DumbbellSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\ErrorBarSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\FlagsSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Funnel3DSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\FunnelSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\GanttSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\GaugeSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\HeatmapSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\HistogramSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\ItemSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\LollipopSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\MapBubbleSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\MapLineSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\MapPointSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\MapSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Networkgraph\DraggableNodes.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Networkgraph\Integrations.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Networkgraph\Layouts.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Networkgraph\Networkgraph.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Networkgraph\QuadTree.js" />
+    <Content Include="libs\highcharts\es-modules\Series\OHLCSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\OrganizationSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\PackedBubbleSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\ParetoSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Pie3DSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\PieSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\PolygonSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Pyramid3DSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\SankeySeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\Scatter3DSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\ScatterSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\SolidGaugeSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\SplineSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\StreamgraphSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\SunburstSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\TilemapSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\TimelineSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\TreemapSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\VariablePieSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\VariwideSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\VectorSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\VennSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\WaterfallSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\WindbarbSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\WordcloudSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Series\XRangeSeries.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\ABIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\ADIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\AOIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\APOIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\AroonIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\AroonOscillatorIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\ATRIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\BBIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\CCIIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\ChaikinIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\CMFIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\DEMAIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\DPOIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\EMAIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\IKHIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\Indicators.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\KeltnerChannelsIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\MACDIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\MFIIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\MomentumIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\NATRIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\PCIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\PivotPointsIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\PPOIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\PriceEnvelopesIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\PSARIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\RegressionIndicators.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\ROCIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\RSIIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\SlowStochasticIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\StochasticIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\SupertrendIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\TEMAIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\TrendLineIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\TRIXIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\VBPIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\VWAPIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\WilliamsRIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\WMAIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\Indicators\ZigzagIndicator.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\StockToolsBindings.js" />
+    <Content Include="libs\highcharts\es-modules\Stock\StockToolsGui.js" />
+    <Content Include="libs\highcharts\highcharts-3d.js" />
+    <Content Include="libs\highcharts\highcharts-3d.src.js" />
+    <Content Include="libs\highcharts\highcharts-more.js" />
+    <Content Include="libs\highcharts\highcharts-more.src.js" />
+    <Content Include="libs\highcharts\highcharts.js" />
+    <Content Include="libs\highcharts\highcharts.src.js" />
+    <Content Include="libs\highcharts\lib\canvg.js" />
+    <Content Include="libs\highcharts\lib\canvg.src.js" />
+    <Content Include="libs\highcharts\lib\jspdf.js" />
+    <Content Include="libs\highcharts\lib\jspdf.src.js" />
+    <Content Include="libs\highcharts\lib\rgbcolor.js" />
+    <Content Include="libs\highcharts\lib\rgbcolor.src.js" />
+    <Content Include="libs\highcharts\lib\svg2pdf.js" />
+    <Content Include="libs\highcharts\lib\svg2pdf.src.js" />
+    <Content Include="libs\highcharts\modules\accessibility.js" />
+    <Content Include="libs\highcharts\modules\accessibility.src.js" />
+    <Content Include="libs\highcharts\modules\annotations-advanced.js" />
+    <Content Include="libs\highcharts\modules\annotations-advanced.src.js" />
+    <Content Include="libs\highcharts\modules\annotations.js" />
+    <Content Include="libs\highcharts\modules\annotations.src.js" />
+    <Content Include="libs\highcharts\modules\arrow-symbols.js" />
+    <Content Include="libs\highcharts\modules\arrow-symbols.src.js" />
+    <Content Include="libs\highcharts\modules\boost-canvas.js" />
+    <Content Include="libs\highcharts\modules\boost-canvas.src.js" />
+    <Content Include="libs\highcharts\modules\boost.js" />
+    <Content Include="libs\highcharts\modules\boost.src.js" />
+    <Content Include="libs\highcharts\modules\broken-axis.js" />
+    <Content Include="libs\highcharts\modules\broken-axis.src.js" />
+    <Content Include="libs\highcharts\modules\bullet.js" />
+    <Content Include="libs\highcharts\modules\bullet.src.js" />
+    <Content Include="libs\highcharts\modules\coloraxis.js" />
+    <Content Include="libs\highcharts\modules\coloraxis.src.js" />
+    <Content Include="libs\highcharts\modules\current-date-indicator.js" />
+    <Content Include="libs\highcharts\modules\current-date-indicator.src.js" />
+    <Content Include="libs\highcharts\modules\cylinder.js" />
+    <Content Include="libs\highcharts\modules\cylinder.src.js" />
+    <Content Include="libs\highcharts\modules\data.js" />
+    <Content Include="libs\highcharts\modules\data.src.js" />
+    <Content Include="libs\highcharts\modules\datagrouping.js" />
+    <Content Include="libs\highcharts\modules\datagrouping.src.js" />
+    <Content Include="libs\highcharts\modules\debugger.js" />
+    <Content Include="libs\highcharts\modules\debugger.src.js" />
+    <Content Include="libs\highcharts\modules\dependency-wheel.js" />
+    <Content Include="libs\highcharts\modules\dependency-wheel.src.js" />
+    <Content Include="libs\highcharts\modules\dotplot.js" />
+    <Content Include="libs\highcharts\modules\dotplot.src.js" />
+    <Content Include="libs\highcharts\modules\drag-panes.js" />
+    <Content Include="libs\highcharts\modules\drag-panes.src.js" />
+    <Content Include="libs\highcharts\modules\draggable-points.js" />
+    <Content Include="libs\highcharts\modules\draggable-points.src.js" />
+    <Content Include="libs\highcharts\modules\drilldown.js" />
+    <Content Include="libs\highcharts\modules\drilldown.src.js" />
+    <Content Include="libs\highcharts\modules\dumbbell.js" />
+    <Content Include="libs\highcharts\modules\dumbbell.src.js" />
+    <Content Include="libs\highcharts\modules\export-data.js" />
+    <Content Include="libs\highcharts\modules\export-data.src.js" />
+    <Content Include="libs\highcharts\modules\exporting.js" />
+    <Content Include="libs\highcharts\modules\exporting.src.js" />
+    <Content Include="libs\highcharts\modules\full-screen.js" />
+    <Content Include="libs\highcharts\modules\full-screen.src.js" />
+    <Content Include="libs\highcharts\modules\funnel.js" />
+    <Content Include="libs\highcharts\modules\funnel.src.js" />
+    <Content Include="libs\highcharts\modules\funnel3d.js" />
+    <Content Include="libs\highcharts\modules\funnel3d.src.js" />
+    <Content Include="libs\highcharts\modules\gantt.js" />
+    <Content Include="libs\highcharts\modules\gantt.src.js" />
+    <Content Include="libs\highcharts\modules\grid-axis.js" />
+    <Content Include="libs\highcharts\modules\grid-axis.src.js" />
+    <Content Include="libs\highcharts\modules\heatmap.js" />
+    <Content Include="libs\highcharts\modules\heatmap.src.js" />
+    <Content Include="libs\highcharts\modules\histogram-bellcurve.js" />
+    <Content Include="libs\highcharts\modules\histogram-bellcurve.src.js" />
+    <Content Include="libs\highcharts\modules\item-series.js" />
+    <Content Include="libs\highcharts\modules\item-series.src.js" />
+    <Content Include="libs\highcharts\modules\lollipop.js" />
+    <Content Include="libs\highcharts\modules\lollipop.src.js" />
+    <Content Include="libs\highcharts\modules\marker-clusters.js" />
+    <Content Include="libs\highcharts\modules\marker-clusters.src.js" />
+    <Content Include="libs\highcharts\modules\networkgraph.js" />
+    <Content Include="libs\highcharts\modules\networkgraph.src.js" />
+    <Content Include="libs\highcharts\modules\no-data-to-display.js" />
+    <Content Include="libs\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="libs\highcharts\modules\offline-exporting.js" />
+    <Content Include="libs\highcharts\modules\offline-exporting.src.js" />
+    <Content Include="libs\highcharts\modules\oldie-polyfills.js" />
+    <Content Include="libs\highcharts\modules\oldie-polyfills.src.js" />
+    <Content Include="libs\highcharts\modules\oldie.js" />
+    <Content Include="libs\highcharts\modules\oldie.src.js" />
+    <Content Include="libs\highcharts\modules\organization.js" />
+    <Content Include="libs\highcharts\modules\organization.src.js" />
+    <Content Include="libs\highcharts\modules\overlapping-datalabels.js" />
+    <Content Include="libs\highcharts\modules\overlapping-datalabels.src.js" />
+    <Content Include="libs\highcharts\modules\parallel-coordinates.js" />
+    <Content Include="libs\highcharts\modules\parallel-coordinates.src.js" />
+    <Content Include="libs\highcharts\modules\pareto.js" />
+    <Content Include="libs\highcharts\modules\pareto.src.js" />
+    <Content Include="libs\highcharts\modules\pathfinder.js" />
+    <Content Include="libs\highcharts\modules\pathfinder.src.js" />
+    <Content Include="libs\highcharts\modules\pattern-fill.js" />
+    <Content Include="libs\highcharts\modules\pattern-fill.src.js" />
+    <Content Include="libs\highcharts\modules\price-indicator.js" />
+    <Content Include="libs\highcharts\modules\price-indicator.src.js" />
+    <Content Include="libs\highcharts\modules\pyramid3d.js" />
+    <Content Include="libs\highcharts\modules\pyramid3d.src.js" />
+    <Content Include="libs\highcharts\modules\sankey.js" />
+    <Content Include="libs\highcharts\modules\sankey.src.js" />
+    <Content Include="libs\highcharts\modules\series-label.js" />
+    <Content Include="libs\highcharts\modules\series-label.src.js" />
+    <Content Include="libs\highcharts\modules\solid-gauge.js" />
+    <Content Include="libs\highcharts\modules\solid-gauge.src.js" />
+    <Content Include="libs\highcharts\modules\sonification.js" />
+    <Content Include="libs\highcharts\modules\sonification.src.js" />
+    <Content Include="libs\highcharts\modules\static-scale.js" />
+    <Content Include="libs\highcharts\modules\static-scale.src.js" />
+    <Content Include="libs\highcharts\modules\stock-tools.js" />
+    <Content Include="libs\highcharts\modules\stock-tools.src.js" />
+    <Content Include="libs\highcharts\modules\stock.js" />
+    <Content Include="libs\highcharts\modules\stock.src.js" />
+    <Content Include="libs\highcharts\modules\streamgraph.js" />
+    <Content Include="libs\highcharts\modules\streamgraph.src.js" />
+    <Content Include="libs\highcharts\modules\sunburst.js" />
+    <Content Include="libs\highcharts\modules\sunburst.src.js" />
+    <Content Include="libs\highcharts\modules\tilemap.js" />
+    <Content Include="libs\highcharts\modules\tilemap.src.js" />
+    <Content Include="libs\highcharts\modules\timeline.js" />
+    <Content Include="libs\highcharts\modules\timeline.src.js" />
+    <Content Include="libs\highcharts\modules\treegrid.js" />
+    <Content Include="libs\highcharts\modules\treegrid.src.js" />
+    <Content Include="libs\highcharts\modules\treemap.js" />
+    <Content Include="libs\highcharts\modules\treemap.src.js" />
+    <Content Include="libs\highcharts\modules\variable-pie.js" />
+    <Content Include="libs\highcharts\modules\variable-pie.src.js" />
+    <Content Include="libs\highcharts\modules\variwide.js" />
+    <Content Include="libs\highcharts\modules\variwide.src.js" />
+    <Content Include="libs\highcharts\modules\vector.js" />
+    <Content Include="libs\highcharts\modules\vector.src.js" />
+    <Content Include="libs\highcharts\modules\venn.js" />
+    <Content Include="libs\highcharts\modules\venn.src.js" />
+    <Content Include="libs\highcharts\modules\windbarb.js" />
+    <Content Include="libs\highcharts\modules\windbarb.src.js" />
+    <Content Include="libs\highcharts\modules\wordcloud.js" />
+    <Content Include="libs\highcharts\modules\wordcloud.src.js" />
+    <Content Include="libs\highcharts\modules\xrange.js" />
+    <Content Include="libs\highcharts\modules\xrange.src.js" />
+    <Content Include="libs\highcharts\themes\avocado.js" />
+    <Content Include="libs\highcharts\themes\avocado.src.js" />
+    <Content Include="libs\highcharts\themes\dark-blue.js" />
+    <Content Include="libs\highcharts\themes\dark-blue.src.js" />
+    <Content Include="libs\highcharts\themes\dark-green.js" />
+    <Content Include="libs\highcharts\themes\dark-green.src.js" />
+    <Content Include="libs\highcharts\themes\dark-unica.js" />
+    <Content Include="libs\highcharts\themes\dark-unica.src.js" />
+    <Content Include="libs\highcharts\themes\gray.js" />
+    <Content Include="libs\highcharts\themes\gray.src.js" />
+    <Content Include="libs\highcharts\themes\grid-light.js" />
+    <Content Include="libs\highcharts\themes\grid-light.src.js" />
+    <Content Include="libs\highcharts\themes\grid.js" />
+    <Content Include="libs\highcharts\themes\grid.src.js" />
+    <Content Include="libs\highcharts\themes\high-contrast-dark.js" />
+    <Content Include="libs\highcharts\themes\high-contrast-dark.src.js" />
+    <Content Include="libs\highcharts\themes\high-contrast-light.js" />
+    <Content Include="libs\highcharts\themes\high-contrast-light.src.js" />
+    <Content Include="libs\highcharts\themes\sand-signika.js" />
+    <Content Include="libs\highcharts\themes\sand-signika.src.js" />
+    <Content Include="libs\highcharts\themes\skies.js" />
+    <Content Include="libs\highcharts\themes\skies.src.js" />
+    <Content Include="libs\highcharts\themes\sunset.js" />
+    <Content Include="libs\highcharts\themes\sunset.src.js" />
+    <Content Include="libs\jqSJLL\dist\distpicker.data.js" />
+    <Content Include="libs\jqSJLL\dist\distpicker.data.min.js" />
+    <Content Include="libs\jqSJLL\dist\distpicker.js" />
+    <Content Include="libs\jqSJLL\dist\distpicker.min.js" />
+    <Content Include="libs\jqSJLL\js\distpicker.data.js" />
+    <Content Include="libs\jqSJLL\js\distpicker.js" />
+    <Content Include="libs\jqSJLL\js\main.js" />
+    <Content Include="libs\jqSJLL\src\distpicker.data.js" />
+    <Content Include="libs\jqSJLL\src\distpicker.js" />
+    <Content Include="libs\jquery-ui\AUTHORS.txt" />
+    <Content Include="libs\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="libs\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="libs\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="libs\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="libs\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="libs\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="libs\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="libs\jquery-ui\index.html" />
+    <Content Include="libs\jquery-ui\jquery-ui.css" />
+    <Content Include="libs\jquery-ui\jquery-ui.js" />
+    <Content Include="libs\jquery-ui\jquery-ui.min.css" />
+    <Content Include="libs\jquery-ui\jquery-ui.min.js" />
+    <Content Include="libs\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="libs\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="libs\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="libs\jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="libs\jquery-ui\LICENSE.txt" />
+    <Content Include="libs\jqueryBoxImg\boxImg.css" />
+    <Content Include="libs\jqueryBoxImg\boxImg.js" />
+    <Content Include="libs\kindeditor\kindeditor-all-min.js" />
+    <Content Include="libs\kindeditor\kindeditor-all.js" />
+    <Content Include="libs\kindeditor\kindeditor-min.js" />
+    <Content Include="libs\kindeditor\kindeditor.js" />
+    <Content Include="libs\kindeditor\lang\ar.js" />
+    <Content Include="libs\kindeditor\lang\en.js" />
+    <Content Include="libs\kindeditor\lang\ko.js" />
+    <Content Include="libs\kindeditor\lang\zh_CN.js" />
+    <Content Include="libs\kindeditor\lang\zh_TW.js" />
+    <Content Include="libs\kindeditor\license.txt" />
+    <Content Include="libs\kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="libs\kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="libs\kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="libs\kindeditor\plugins\baidumap\index.html" />
+    <Content Include="libs\kindeditor\plugins\baidumap\map.html" />
+    <Content Include="libs\kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="libs\kindeditor\plugins\code\code.js" />
+    <Content Include="libs\kindeditor\plugins\code\prettify.css" />
+    <Content Include="libs\kindeditor\plugins\code\prettify.js" />
+    <Content Include="libs\kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="libs\kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="libs\kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="libs\kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="libs\kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="libs\kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="libs\kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="libs\kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="libs\kindeditor\plugins\flash\flash.js" />
+    <Content Include="libs\kindeditor\plugins\image\image.js" />
+    <Content Include="libs\kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="libs\kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="libs\kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="libs\kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="libs\kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="libs\kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="libs\kindeditor\plugins\link\link.js" />
+    <Content Include="libs\kindeditor\plugins\map\map.html" />
+    <Content Include="libs\kindeditor\plugins\map\map.js" />
+    <Content Include="libs\kindeditor\plugins\media\media.js" />
+    <Content Include="libs\kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="libs\kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="libs\kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="libs\kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="libs\kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="libs\kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="libs\kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="libs\kindeditor\plugins\preview\preview.js" />
+    <Content Include="libs\kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="libs\kindeditor\plugins\table\table.js" />
+    <Content Include="libs\kindeditor\plugins\template\html\1.html" />
+    <Content Include="libs\kindeditor\plugins\template\html\2.html" />
+    <Content Include="libs\kindeditor\plugins\template\html\3.html" />
+    <Content Include="libs\kindeditor\plugins\template\template.js" />
+    <Content Include="libs\kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="libs\kindeditor\themes\common\anchor.gif" />
+    <Content Include="libs\kindeditor\themes\common\blank.gif" />
+    <Content Include="libs\kindeditor\themes\common\flash.gif" />
+    <Content Include="libs\kindeditor\themes\common\loading.gif" />
+    <Content Include="libs\kindeditor\themes\common\media.gif" />
+    <Content Include="libs\kindeditor\themes\common\rm.gif" />
+    <Content Include="libs\kindeditor\themes\default\background.png" />
+    <Content Include="libs\kindeditor\themes\default\default.css" />
+    <Content Include="libs\kindeditor\themes\default\default.png" />
+    <Content Include="libs\kindeditor\themes\qq\editor.gif" />
+    <Content Include="libs\kindeditor\themes\qq\qq.css" />
+    <Content Include="libs\kindeditor\themes\simple\simple.css" />
+    <Content Include="libs\layui\css\layui.css" />
+    <Content Include="libs\layui\css\layui.mobile.css" />
+    <Content Include="libs\layui\css\modules\code.css" />
+    <Content Include="libs\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="libs\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="libs\layui\css\modules\layer\default\icon.png" />
+    <Content Include="libs\layui\css\modules\layer\default\layer.css" />
+    <Content Include="libs\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="libs\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="libs\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="libs\layui\font\iconfont.svg" />
+    <Content Include="libs\layui\images\face\0.gif" />
+    <Content Include="libs\layui\images\face\1.gif" />
+    <Content Include="libs\layui\images\face\10.gif" />
+    <Content Include="libs\layui\images\face\11.gif" />
+    <Content Include="libs\layui\images\face\12.gif" />
+    <Content Include="libs\layui\images\face\13.gif" />
+    <Content Include="libs\layui\images\face\14.gif" />
+    <Content Include="libs\layui\images\face\15.gif" />
+    <Content Include="libs\layui\images\face\16.gif" />
+    <Content Include="libs\layui\images\face\17.gif" />
+    <Content Include="libs\layui\images\face\18.gif" />
+    <Content Include="libs\layui\images\face\19.gif" />
+    <Content Include="libs\layui\images\face\2.gif" />
+    <Content Include="libs\layui\images\face\20.gif" />
+    <Content Include="libs\layui\images\face\21.gif" />
+    <Content Include="libs\layui\images\face\22.gif" />
+    <Content Include="libs\layui\images\face\23.gif" />
+    <Content Include="libs\layui\images\face\24.gif" />
+    <Content Include="libs\layui\images\face\25.gif" />
+    <Content Include="libs\layui\images\face\26.gif" />
+    <Content Include="libs\layui\images\face\27.gif" />
+    <Content Include="libs\layui\images\face\28.gif" />
+    <Content Include="libs\layui\images\face\29.gif" />
+    <Content Include="libs\layui\images\face\3.gif" />
+    <Content Include="libs\layui\images\face\30.gif" />
+    <Content Include="libs\layui\images\face\31.gif" />
+    <Content Include="libs\layui\images\face\32.gif" />
+    <Content Include="libs\layui\images\face\33.gif" />
+    <Content Include="libs\layui\images\face\34.gif" />
+    <Content Include="libs\layui\images\face\35.gif" />
+    <Content Include="libs\layui\images\face\36.gif" />
+    <Content Include="libs\layui\images\face\37.gif" />
+    <Content Include="libs\layui\images\face\38.gif" />
+    <Content Include="libs\layui\images\face\39.gif" />
+    <Content Include="libs\layui\images\face\4.gif" />
+    <Content Include="libs\layui\images\face\40.gif" />
+    <Content Include="libs\layui\images\face\41.gif" />
+    <Content Include="libs\layui\images\face\42.gif" />
+    <Content Include="libs\layui\images\face\43.gif" />
+    <Content Include="libs\layui\images\face\44.gif" />
+    <Content Include="libs\layui\images\face\45.gif" />
+    <Content Include="libs\layui\images\face\46.gif" />
+    <Content Include="libs\layui\images\face\47.gif" />
+    <Content Include="libs\layui\images\face\48.gif" />
+    <Content Include="libs\layui\images\face\49.gif" />
+    <Content Include="libs\layui\images\face\5.gif" />
+    <Content Include="libs\layui\images\face\50.gif" />
+    <Content Include="libs\layui\images\face\51.gif" />
+    <Content Include="libs\layui\images\face\52.gif" />
+    <Content Include="libs\layui\images\face\53.gif" />
+    <Content Include="libs\layui\images\face\54.gif" />
+    <Content Include="libs\layui\images\face\55.gif" />
+    <Content Include="libs\layui\images\face\56.gif" />
+    <Content Include="libs\layui\images\face\57.gif" />
+    <Content Include="libs\layui\images\face\58.gif" />
+    <Content Include="libs\layui\images\face\59.gif" />
+    <Content Include="libs\layui\images\face\6.gif" />
+    <Content Include="libs\layui\images\face\60.gif" />
+    <Content Include="libs\layui\images\face\61.gif" />
+    <Content Include="libs\layui\images\face\62.gif" />
+    <Content Include="libs\layui\images\face\63.gif" />
+    <Content Include="libs\layui\images\face\64.gif" />
+    <Content Include="libs\layui\images\face\65.gif" />
+    <Content Include="libs\layui\images\face\66.gif" />
+    <Content Include="libs\layui\images\face\67.gif" />
+    <Content Include="libs\layui\images\face\68.gif" />
+    <Content Include="libs\layui\images\face\69.gif" />
+    <Content Include="libs\layui\images\face\7.gif" />
+    <Content Include="libs\layui\images\face\70.gif" />
+    <Content Include="libs\layui\images\face\71.gif" />
+    <Content Include="libs\layui\images\face\8.gif" />
+    <Content Include="libs\layui\images\face\9.gif" />
+    <Content Include="libs\layui\layui.all.js" />
+    <Content Include="libs\layui\layui.js" />
+    <Content Include="libs\layui\lay\modules\carousel.js" />
+    <Content Include="libs\layui\lay\modules\code.js" />
+    <Content Include="libs\layui\lay\modules\colorpicker.js" />
+    <Content Include="libs\layui\lay\modules\element.js" />
+    <Content Include="libs\layui\lay\modules\flow.js" />
+    <Content Include="libs\layui\lay\modules\form.js" />
+    <Content Include="libs\layui\lay\modules\jquery.js" />
+    <Content Include="libs\layui\lay\modules\laydate.js" />
+    <Content Include="libs\layui\lay\modules\layedit.js" />
+    <Content Include="libs\layui\lay\modules\layer.js" />
+    <Content Include="libs\layui\lay\modules\laypage.js" />
+    <Content Include="libs\layui\lay\modules\laytpl.js" />
+    <Content Include="libs\layui\lay\modules\mobile.js" />
+    <Content Include="libs\layui\lay\modules\rate.js" />
+    <Content Include="libs\layui\lay\modules\slider.js" />
+    <Content Include="libs\layui\lay\modules\table.js" />
+    <Content Include="libs\layui\lay\modules\transfer.js" />
+    <Content Include="libs\layui\lay\modules\tree.js" />
+    <Content Include="libs\layui\lay\modules\upload.js" />
+    <Content Include="libs\layui\lay\modules\util.js" />
+    <Content Include="libs\layui\modules\treetable-lay\treetable.css" />
+    <Content Include="libs\layui\modules\treetable-lay\treetable.js" />
+    <Content Include="libs\switchery\.gitignore" />
+    <Content Include="libs\switchery\dist\switchery.css" />
+    <Content Include="libs\switchery\dist\switchery.js" />
+    <Content Include="libs\switchery\dist\switchery.min.css" />
+    <Content Include="libs\switchery\dist\switchery.min.js" />
+    <Content Include="libs\switchery\switchery.css" />
+    <Content Include="libs\switchery\switchery.js" />
+    <Content Include="libs\Viewer.js\viewer-jquery.min.js" />
+    <Content Include="libs\Viewer.js\viewer.min.css" />
+    <Content Include="libs\Viewer.js\viewer.min.js" />
+    <Content Include="libs\wa.jpg" />
+    <Content Include="logo.png" />
+    <Content Include="libs\.DS_Store" />
+    <Content Include="libs\haikan\.DS_Store" />
+    <Content Include="libs\haikan\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="libs\haikan\bootstrap\css\bootstrap.css.map" />
+    <Content Include="libs\haikan\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="libs\haikan\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="libs\haikan\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="libs\haikan\icons\elegant\fonts\ElegantIcons.eot" />
+    <Content Include="libs\haikan\icons\elegant\fonts\ElegantIcons.ttf" />
+    <Content Include="libs\haikan\icons\elegant\fonts\ElegantIcons.woff" />
+    <Content Include="libs\haikan\icons\elusive\css\fonts\Elusive-Icons.eot" />
+    <Content Include="libs\haikan\icons\elusive\css\fonts\Elusive-Icons.ttf" />
+    <Content Include="libs\haikan\icons\elusive\css\fonts\Elusive-Icons.woff" />
+    <Content Include="libs\haikan\icons\elusive\less\elusive-webfont.less" />
+    <Content Include="libs\haikan\icons\elusive\less\variables.less" />
+    <Content Include="libs\haikan\icons\elusive\README.md" />
+    <Content Include="libs\haikan\icons\elusive\sass\elusive-webfont.scss" />
+    <Content Include="libs\haikan\icons\elusive\sass\_variables.scss" />
+    <Content Include="libs\haikan\js\jquery.min.map" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\bower.json" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\js\minified\jquery.mCustomScrollbar.min.js.gz" />
+    <Content Include="libs\haikan\lib\malihu-custom-scrollbar-plugin\readme.md" />
+    <Content Include="libs\highcharts\.DS_Store" />
+    <Content Include="libs\highcharts\css\annotations\popup.scss" />
+    <Content Include="libs\highcharts\css\highcharts.scss" />
+    <Content Include="libs\highcharts\css\stocktools\gui.scss" />
+    <Content Include="libs\highcharts\css\themes\dark-unica.scss" />
+    <Content Include="libs\highcharts\css\themes\grid-light.scss" />
+    <Content Include="libs\highcharts\css\themes\sand-signika.scss" />
+    <Content Include="libs\jquery-ui\package.json" />
+    <Content Include="libs\kindeditor\.DS_Store" />
+    <Content Include="libs\kindeditor\asp.net\file_manager_json.ashx" />
+    <Content Include="libs\kindeditor\asp.net\upload_json.ashx" />
+    <Content Include="libs\layui\font\iconfont.eot" />
+    <Content Include="libs\layui\font\iconfont.ttf" />
+    <Content Include="libs\layui\font\iconfont.woff" />
+    <Content Include="libs\layui\font\iconfont.woff2" />
+    <Content Include="libs\switchery\bower.json" />
+    <Content Include="libs\switchery\CHANGELOG.md" />
+    <Content Include="libs\switchery\component.json" />
+    <Content Include="libs\switchery\Makefile" />
+    <Content Include="libs\switchery\package.json" />
+    <Content Include="libs\switchery\README.md" />
+    <Content Include="General\SystemManage\SystemMenuHandler.ashx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\passportservice\passportservice.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Employee\EmployeeAdd.aspx.cs">
+      <DependentUpon>EmployeeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Employee\EmployeeAdd.aspx.designer.cs">
+      <DependentUpon>EmployeeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Enterprise\EnterpriseAdd.aspx.cs">
+      <DependentUpon>EnterpriseAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Enterprise\EnterpriseAdd.aspx.designer.cs">
+      <DependentUpon>EnterpriseAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Enterprise\EnterpriseList.aspx.cs">
+      <DependentUpon>EnterpriseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Enterprise\EnterpriseList.aspx.designer.cs">
+      <DependentUpon>EnterpriseList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Hfile\Hfile.aspx.cs">
+      <DependentUpon>Hfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Hfile\Hfile.aspx.designer.cs">
+      <DependentUpon>Hfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Hfile\HfileAdd.aspx.cs">
+      <DependentUpon>HfileAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Hfile\HfileAdd.aspx.designer.cs">
+      <DependentUpon>HfileAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\HeadAndMenu.ascx.cs">
+      <DependentUpon>HeadAndMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\HeadAndMenu.ascx.designer.cs">
+      <DependentUpon>HeadAndMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="General\IdentifyingCode.aspx.cs">
+      <DependentUpon>IdentifyingCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\IdentifyingCode.aspx.designer.cs">
+      <DependentUpon>IdentifyingCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Contract\ContractAdd.aspx.cs">
+      <DependentUpon>ContractAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Contract\ContractAdd.aspx.designer.cs">
+      <DependentUpon>ContractAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Contract\ContractList.aspx.cs">
+      <DependentUpon>ContractList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Contract\ContractList.aspx.designer.cs">
+      <DependentUpon>ContractList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Employee\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Employee\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Financial\FinancialList.aspx.cs">
+      <DependentUpon>FinancialList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Financial\FinancialList.aspx.designer.cs">
+      <DependentUpon>FinancialList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Financial\FinancialAdd.aspx.cs">
+      <DependentUpon>FinancialAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Financial\FinancialAdd.aspx.designer.cs">
+      <DependentUpon>FinancialAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Project\ProjectList.aspx.cs">
+      <DependentUpon>ProjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Project\ProjectList.aspx.designer.cs">
+      <DependentUpon>ProjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Project\ProjectAdd.aspx.cs">
+      <DependentUpon>ProjectAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Project\ProjectAdd.aspx.designer.cs">
+      <DependentUpon>ProjectAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Statistical\Average.aspx.cs">
+      <DependentUpon>Average.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Statistical\Average.aspx.designer.cs">
+      <DependentUpon>Average.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Statistical\FinancialAnalysis.aspx.cs">
+      <DependentUpon>FinancialAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Statistical\FinancialAnalysis.aspx.designer.cs">
+      <DependentUpon>FinancialAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Statistical\PersonParticipate.aspx.cs">
+      <DependentUpon>PersonParticipate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Statistical\PersonParticipate.aspx.designer.cs">
+      <DependentUpon>PersonParticipate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Statistical\ProjectAnalyze.aspx.cs">
+      <DependentUpon>ProjectAnalyze.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Statistical\ProjectAnalyze.aspx.designer.cs">
+      <DependentUpon>ProjectAnalyze.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Personal\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Personal\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemLicense.aspx.cs">
+      <DependentUpon>SystemLicense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemLicense.aspx.designer.cs">
+      <DependentUpon>SystemLicense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemMenuHandler.ashx.cs">
+      <DependentUpon>SystemMenuHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemMenuList.aspx.cs">
+      <DependentUpon>SystemMenuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemMenuList.aspx.designer.cs">
+      <DependentUpon>SystemMenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemMenuAdd.aspx.cs">
+      <DependentUpon>SystemMenuAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemMenuAdd.aspx.designer.cs">
+      <DependentUpon>SystemMenuAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Personal\PersonaInformation.aspx.cs">
+      <DependentUpon>PersonaInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\Personal\PersonaInformation.aspx.designer.cs">
+      <DependentUpon>PersonaInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemRolesAdd.aspx.cs">
+      <DependentUpon>SystemRolesAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemRolesAdd.aspx.designer.cs">
+      <DependentUpon>SystemRolesAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemRolesList.aspx.cs">
+      <DependentUpon>SystemRolesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemRolesList.aspx.designer.cs">
+      <DependentUpon>SystemRolesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemSetting.aspx.cs">
+      <DependentUpon>SystemSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemSetting.aspx.designer.cs">
+      <DependentUpon>SystemSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemLog.aspx.cs">
+      <DependentUpon>SystemLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemLog.aspx.designer.cs">
+      <DependentUpon>SystemLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemUserList.aspx.cs">
+      <DependentUpon>SystemUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemUserList.aspx.designer.cs">
+      <DependentUpon>SystemUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemUserAdd.aspx.cs">
+      <DependentUpon>SystemUserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General\SystemManage\SystemUserAdd.aspx.designer.cs">
+      <DependentUpon>SystemUserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General\upload.ashx.cs">
+      <DependentUpon>upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\passportservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="General\upload.ashx" />
+    <None Include="packages.config" />
+    <None Include="Web References\passportservice\passportservice.wsdl" />
+    <Content Include="Web References\passportservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UploadFiles\Docking\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Haikan.SchoolProjectsCore\Haikan.SchoolProjectsCore.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>Haikan.SchoolProjectsCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://sso.haikan.com.cn/api/passportservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\passportservice\</RelPath>
+      <UpdateFromURL>https://sso.haikan.com.cn/api/passportservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HaikanSchoolProjects_passportservice_PassportService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52314</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52314/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

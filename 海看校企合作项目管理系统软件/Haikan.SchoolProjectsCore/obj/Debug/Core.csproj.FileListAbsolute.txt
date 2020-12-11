@@ -1,0 +1,6 @@
+D:\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\bin\Debug\Haikan.dll
+D:\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\bin\Debug\Haikan.Core.dll
+D:\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\bin\Debug\Haikan.Core.pdb
+D:\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\obj\Debug\Haikan.Core.dll
+D:\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\obj\Debug\Haikan.Core.pdb
+D:\HK201710029海看代码生成工具软件\源码文件\HaikanCodeMaker\bin\Debug\Template\HaikanCodeMakerDemoS3\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache

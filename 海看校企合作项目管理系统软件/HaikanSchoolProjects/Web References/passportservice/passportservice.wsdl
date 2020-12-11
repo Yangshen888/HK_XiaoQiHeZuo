@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.passport.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.passport.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.passport.com/">
+      <s:element name="TokenGetCert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TokenGetCertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TokenGetCertResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TokenClear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TokenClearResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TokenGetCertSoapIn">
+    <wsdl:part name="parameters" element="tns:TokenGetCert" />
+  </wsdl:message>
+  <wsdl:message name="TokenGetCertSoapOut">
+    <wsdl:part name="parameters" element="tns:TokenGetCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="TokenClearSoapIn">
+    <wsdl:part name="parameters" element="tns:TokenClear" />
+  </wsdl:message>
+  <wsdl:message name="TokenClearSoapOut">
+    <wsdl:part name="parameters" element="tns:TokenClearResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PassportServiceSoap">
+    <wsdl:operation name="TokenGetCert">
+      <wsdl:input message="tns:TokenGetCertSoapIn" />
+      <wsdl:output message="tns:TokenGetCertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TokenClear">
+      <wsdl:input message="tns:TokenClearSoapIn" />
+      <wsdl:output message="tns:TokenClearSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PassportServiceSoap" type="tns:PassportServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TokenGetCert">
+      <soap:operation soapAction="http://www.passport.com/TokenGetCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TokenClear">
+      <soap:operation soapAction="http://www.passport.com/TokenClear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PassportServiceSoap12" type="tns:PassportServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TokenGetCert">
+      <soap12:operation soapAction="http://www.passport.com/TokenGetCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TokenClear">
+      <soap12:operation soapAction="http://www.passport.com/TokenClear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PassportService">
+    <wsdl:port name="PassportServiceSoap" binding="tns:PassportServiceSoap">
+      <soap:address location="https://sso.haikan.com.cn/api/passportservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PassportServiceSoap12" binding="tns:PassportServiceSoap12">
+      <soap12:address location="https://sso.haikan.com.cn/api/passportservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

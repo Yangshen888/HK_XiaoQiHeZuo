@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IdentifyingCode.aspx.cs" Inherits=" HaikanSchoolProjects.General.IdentifyingCode" %>

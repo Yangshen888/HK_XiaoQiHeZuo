@@ -1,0 +1,101 @@
+﻿<script type="text/javascript">
+    let reg = /.*domain\.com$/;
+    if(window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' && !reg.test(window.location.hostname))
+    {
+        const targetProtocol = "https:";
+        if (window.location.protocol !== targetProtocol)
+            window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
+    }
+</script>
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<!--元数据-->
+<meta name="renderer" content="webkit">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!--layui-->
+<link href="/libs/layui/css/layui.css" type="text/css" rel="stylesheet" />
+<script src="/libs/layui/layui.all.js"></script>
+<script>
+    let layer, laydate, form, element;
+    layer = layui.layer,
+    laydate = layui.laydate,
+    form = layui.form,
+    element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+</script>
+
+<!--kindeditor文本编辑器-->
+<script charset="utf-8" src="/libs/kindeditor/kindeditor.js"></script>
+
+<!--haikan-->
+<link href="/libs/haikan/haikan.css" type="text/css" rel="stylesheet" />
+<script src="/libs/haikan/Haikan.js" type="text/javascript"></script>
+
+<!-- jQuery -->
+<script src="/libs/haikan/js/jquery.min.js"></script>
+<script src="/libs/haikan/js/jquery.validate.js"></script>
+
+<!--highcharts-->
+<script src="/libs/highcharts/highcharts.js"></script>
+<script src="/libs/highcharts/modules/exporting.js"></script>
+<script src="/libs/highcharts/modules/data.js"></script>	    
+
+<!-- bootstrap framework -->
+<link href="/libs/haikan/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+<!-- icon sets -->
+<!-- elegant icons -->
+<link href="/libs/haikan/icons/elegant/style.css" rel="stylesheet" media="screen">
+<!-- elusive icons -->
+<link href="/libs/haikan/icons/elusive/css/elusive-webfont.css" rel="stylesheet" media="screen">
+<!-- flags -->
+<link rel="stylesheet" href="/libs/haikan/icons/flags/flags.css">
+<!-- scrollbar -->
+<link rel="stylesheet" href="/libs/haikan/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+
+<!-- main stylesheet -->
+<link href="/libs/haikan/css/main.min.css" rel="stylesheet" media="screen" id="mainCss">
+
+<!-- moment.js (date library) -->
+<script src="/libs/haikan/js/moment-with-langs.min.js"></script>
+
+<!-- jQuery Cookie -->
+<script src="/libs/haikan/js/jqueryCookie.min.js"></script>
+<!-- Bootstrap Framework -->
+<script src="/libs/haikan/bootstrap/js/bootstrap.min.js"></script>
+<!-- retina images -->
+<script src="/libs/haikan/js/retina.min.js"></script>
+
+<!-- fastclick -->
+<script src="/libs/haikan/js/fastclick.min.js"></script>
+
+<!-- scrollbar -->
+<script src="/libs/haikan/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- switchery -->
+<script src="/libs/switchery/dist/switchery.min.js"></script>
+
+<script src="/libs/haikan/HaikanGeneral.js"></script>
+
+<script charset="utf-8" src="/libs/jqSJLL/dist/distpicker.data.js"></script>
+<script charset="utf-8" src="/libs/jqSJLL/dist/distpicker.js"></script>
+
+<script src="/libs/jquery-ui/jquery-ui.min.js"></script>
+<link href="/libs/jquery-ui/jquery-ui.css" rel="stylesheet" />
+
+<script src="/libs/Viewer.js/viewer-jquery.min.js"></script>
+<link href="/libs/Viewer.js/viewer.min.css" rel="stylesheet" />
+
+<style type="text/css">
+.scroll-wrapper {
+-webkit-overflow-scrolling: touch;
+overflow-y: scroll;
+}
+
+u{
+text-decoration:underline;
+}
+</style>
